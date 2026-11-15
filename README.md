@@ -74,7 +74,7 @@ Maintained by Aydin Monavvari as part of an open research portfolio — see [Com
 ## Market data & datasets
 
 - [yfinance](https://github.com/ranaroussi/yfinance) — unofficial downloader for Yahoo Finance market data; convenient for prototyping, not a stable production data source.
-- [FRED](https://fred.stlouisfed.org) — St. Louis Fed database of macroeconomic and financial time series; free API access with registration.
+- [FRED](https://fred.stlouisfed.org) — St. Louis Fed database of macroeconomic and financial time series; free API access with registration. (Note: the site drops automated requests from datacenter IPs, so the CI link check skips it.)
 - [Nasdaq Data Link](https://data.nasdaq.com) — data platform (formerly Quandl): some series free, most content commercial.
 - [SEC EDGAR full-text search](https://www.sec.gov/edgar/search/) — free search over US regulatory filings and disclosures. (Note: sec.gov rate-limits automated requests; a user-agent header is required.)
 - [ECB Data Portal](https://data.ecb.europa.eu/) — European Central Bank statistics (exchange rates, yields, prices); successor to the Statistical Data Warehouse.

@@ -11,6 +11,7 @@
     }
   ],
   "ignorePatterns": [
-    { "pattern": "^https://doi\\.org/" }
+    { "pattern": "^https://doi\\.org/" },
+    { "pattern": "^https://fred\\.stlouisfed\\.org" }
   ]
 }

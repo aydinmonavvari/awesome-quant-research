@@ -43,7 +43,7 @@ The em-dash separator is mandatory for every bullet entry and is enforced by the
 - **links** — runs [markdown-link-check](https://github.com/gaurav-nelson/github-action-markdown-link-check) with `mlc_config.json`:
   - `retryOn429` with `retryCount: 3` handles rate limiting.
   - HTTP `403` is treated as "alive": several well-known domains (SSRN, publisher sites such as Wiley, Stack Exchange, Kaggle) block automated requests while serving browsers normally.
-  - `doi.org` is in `ignorePatterns` because its targets (Wiley, Elsevier, Springer) block automated requests; DOI links are resolved manually at commit time.
+  - `doi.org` and `fred.stlouisfed.org` are in `ignorePatterns`: doi.org targets (Wiley, Elsevier, Springer) block automated requests and are resolved manually at commit time, and FRED drops automated requests from datacenter IPs (verified from both a sandbox and a GitHub Actions runner); DOI links are resolved manually at commit time.
   - A browser-like User-Agent header is sent to github.com and sec.gov.
 
 Domains that are excluded from automated checking — or that block automated requests outright — are **verified manually at commit time** with a browser-like user agent, and re-verified whenever their annotations are edited. Report dead links via a pull request; updating the annotation or dropping the entry is an acceptable fix.
